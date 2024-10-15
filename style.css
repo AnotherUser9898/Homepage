@@ -1,0 +1,414 @@
+@font-face {
+    font-family: "PlayFair";
+    src: url("./assets/fonts/PlayfairDisplay-VariableFont_wght.woff2") format("woff2");
+    font-weight: 100 1000;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+:root {
+    --diagonal-color: rgb(8 145 178);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0px;
+    display: grid;
+    position: relative;
+}
+
+.strip {
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 5px 15px);
+    position: absolute;
+    top: 0px;
+}
+
+.inner-strip {
+    height: 100%;
+    width: 100%;
+    background-color: var(--diagonal-color);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 0% 100%);
+}
+
+.bottom-strip {
+    height: 100%;
+    width: 100%;
+    background-color: var(--diagonal-color);
+}
+
+.image-container {
+    z-index: 3;
+}
+
+.name-container {
+    width: 100%;
+    container: image / size;
+    margin-top: -15%;
+    height: 10cqh;
+}
+
+@container image (width <=1000px) {
+    .name {
+        height: max-content;
+        font-size: 14cqw;
+    }
+}
+
+.name {
+    margin: 0;
+    text-align: center;
+    font-weight: 100;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+header,
+main,
+footer {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.header-container {
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+.my-image {
+    height: 90vh;
+    z-index: 4;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.about-me-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: center;
+    gap: 35px;
+    height: max-content;
+    padding: 1rem;
+    z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: translateX(0px);
+    flex: 1 1 auto;
+    font-size: 0.9rem;
+}
+
+.about-me-title {
+    font-size: 3em;
+    font-family: "PlayFair";
+    font-weight: 100;
+    margin: 0px;
+}
+
+
+.about-me-content {
+    font-size: 1.5em;
+    line-height: 1.6;
+    font-family: "Roboto";
+    color: #374151;
+    margin: 0px;
+}
+
+.socials {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+}
+
+.socials img {
+    width: 2em;
+    height: 2em;
+}
+
+.parent-project-container {
+    display: grid;
+}
+
+.projects-title {
+    font-family: "PlayFair";
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-content: space-between;
+    align-content: space-between;
+    row-gap: 4rem;
+    column-gap: 3rem;
+    justify-items: center;
+}
+
+.project-card {
+    height: min-content;
+    padding-bottom: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    min-width: 320px;
+    max-width: 435px;
+}
+
+.project-name-and-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-screenshot {
+    background-color: aquamarine;
+    text-align: center;
+    align-content: center;
+    font-family: "PlayFair";
+    font-size: 2.5rem;
+    color: white;
+    padding: 4rem 2rem;
+}
+
+.project-name {
+    font-family: "PlayFair";
+    font-size: 1.5em;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.links img {
+    width: 2em;
+    height: 2em;
+}
+
+.project-name-and-links,
+.project-description {
+    padding: 0px 30px 0px 30px;
+}
+
+.project-description {
+    font-size: 1.3em;
+}
+
+.background {
+    background-color: var(--diagonal-color);
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5rem 0rem;
+    color: white;
+}
+
+.contact-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.contact-me-title {
+    font-family: "PlayFair";
+    font-size: 3rem;
+    font-weight: 100;
+    margin: 0px 0px -1.5rem 0px;
+}
+
+.contact-me-container>div:not(.contace-me-title) {
+    font-size: x-large;
+    width: 100%;
+    font-family: "Roboto";
+}
+
+.phone-and-email {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.phone-container,
+.email-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    word-break: break-word;
+}
+
+.footer-photo {
+    width: 30vw;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-socials>img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.phone-icon,
+.email-icon {
+    width: 2rem;
+    height: 2rem;
+    filter: invert(1);
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        width: 100%;
+    }
+
+    header,
+    main,
+    footer {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .header-container {
+        height: auto;
+    }
+
+    header {
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about-me-title {
+        align-self: center;
+    }
+
+    .about-me-container {
+        box-shadow: none;
+        background: none;
+    }
+
+    .name {
+        font-size: 13cqw;
+    }
+
+    .projects-title {
+        justify-self: center;
+    }
+
+    .socials {
+        justify-content: center;
+    }
+
+    .my-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-me-title {
+        align-self: center;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .footer-photo {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .strip {
+        height: 480px;
+    }
+}
+
+@media (600px < width <=1200px) {
+    .header-container {
+        height: auto;
+    }
+
+    header {
+        display: block;
+        position: relative;
+        margin-top: 8rem;
+        height: auto;
+    }
+
+    .image-container {
+        z-index: 4;
+        width: max-content;
+        height: 100%;
+        float: left;
+        margin: -10% 1rem 0px -5%;
+        position: relative;
+    }
+
+    .about-me-title {
+        margin-top: 5rem;
+    }
+
+    .name-container {
+        width: 100%;
+        container: image / size;
+        height: 10cqw;
+        z-index: 5;
+        position: relative;
+        text-align: center;
+        margin-top: -22%;
+        transform: translate(82%, -475%);
+        color: white;
+    }
+
+    header,
+    main,
+    footer {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .strip {
+        height: 600px;
+    }
+
+    .about-me-container {
+        display: block;
+        position: relative;
+    }
+
+    .my-image {
+        width: 45vw;
+        height: auto;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+    }
+
+    .project-card {
+        min-width: 25vw;
+    }
+}
